@@ -119,7 +119,6 @@ tion, vol. 33, pp. 1835-1849, 2000.
 
 [6] Jianguo Zhang, Tieniu Tan, Li Ma, ”Invariant texture segmentation via circular gabor filter”, Proceedings of the 16th IAPR International Conference on Pattern Recognition (ICPR), Vol II, pp. 901-904,2002.
 
-[7] Gabor filter Applet. http://www.cs.rug.nl/∼imaging/simplecell.html
 
 
 
