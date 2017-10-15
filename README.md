@@ -36,3 +36,11 @@ Therefore, we use the real part of Gabor.
 
 We use orientation separation angles of 30◦ as recommended in [4], that is:
 
+![equation3](https://user-images.githubusercontent.com/15813546/31584981-3d7e1e38-b1c6-11e7-9ab6-6e0693d38e78.jpg)
+
+and following values of frequencies as recommended in [6]
+![equation4](https://user-images.githubusercontent.com/15813546/31584990-652c251a-b1c6-11e7-9026-3e729f550684.jpg)
+
+where ![equation5](https://user-images.githubusercontent.com/15813546/31585017-c9891d9c-b1c6-11e7-8b4d-4125f0c151cc.jpg), Nc is the width of image which is a power of 2. Note that ![equation6](https://user-images.githubusercontent.com/15813546/31585024-e950a26c-b1c6-11e7-8066-9ca836cfc5ba.jpg)
+and ![equation7](https://user-images.githubusercontent.com/15813546/31585032-f6106a64-b1c6-11e7-855d-e1530a86f5c9.jpg).
+
