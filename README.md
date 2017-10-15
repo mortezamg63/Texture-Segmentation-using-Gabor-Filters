@@ -32,7 +32,7 @@ bandwidth b (in octaves) and the ratio σ/λ are related as follows:
 of Gabor filter is an even-symmetric filter, and the property satisfies the requirement proposed by Malik [1].
 Therefore, we use the real part of Gabor.
 
-### Choice of Filter Parameters
+#### Choice of Filter Parameters
 
 We use orientation separation angles of 30◦ as recommended in [4], that is:
 
