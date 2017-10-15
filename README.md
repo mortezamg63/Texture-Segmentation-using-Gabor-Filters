@@ -100,14 +100,8 @@ pixels at outer circumference will usually have lower values than other usual mi
 of the intensities of the original image.) This is a defect of a filtering method based on my image segmentation
 method.
 
-Bibliography
-[1]
-[2]
-[3]
-[4]
-[5]
-[6]
-[7]
+### Bibliography
+
 [1] Perona and Malik, ”Preattentive texture discrimination with early vision mechanisms,” J. Opt. Soc.
 Am. A, Vol. 7, No. 5, May 1990.
 
