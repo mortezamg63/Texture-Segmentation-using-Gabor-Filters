@@ -59,4 +59,76 @@ Gaussian smoothing function which is given by
 where σ is the standard deviation which determines the (linear) size of the receptive field (window size).
 
    We choose ![eq10](https://user-images.githubusercontent.com/15813546/31585078-10912e18-b1c8-11e7-86b8-6f13d6346a6a.jpg) where ![eq11](https://user-images.githubusercontent.com/15813546/31585079-17ac21d0-b1c8-11e7-9b3e-7388ae60f260.jpg) is the scale parameter of Gabor filter given by (2) as similar to the recommendation, ![eq12](https://user-images.githubusercontent.com/15813546/31585080-259f1f36-b1c8-11e7-8fc6-531d911ef60a.jpg) , by [6].
+   
+   ### 3- Clustering
+   
+   The final step is to cluster the pixels into a number of clusters representing the texture regions. Although
+Jain used CLUSTER algorithm [2], we use the k-means algorithm. The algorithm of k-means is as follows:
+
+'   1. Initialize centroids of K-clusters randomly.'
+
+'   2. Assign each sample to the nearest centroid.'
+
+'   3. Calculate centroids (means) of K-clusters.'
+
+'   4. If centroids are unchanged, done. Otherwise, go to step 2.'
+
+Furthermore, we include the spatial coordinates of the pixels as two additional features to take into
+account the spatial adjacency information in the clustering process as proposed by [2].
+
+### 4- Results
+
+The multi-channel image segmentation system mentioned above was implemented and tested against a textured
+image from the Brodatz album [5]. The number of clusters is considered 5.
+
+![Result Pic1](https://user-images.githubusercontent.com/15813546/31585142-7bc2b7fa-b1c9-11e7-9e7d-fa460f94ea1a.jpg)
+
+Also, the result is shown in another image as follow.
+
+![Result pic2](https://user-images.githubusercontent.com/15813546/31585140-72f6b9fa-b1c9-11e7-9272-2a399b6b40f1.jpg)
+
+### 4- Discussion
+
+K-means clustering often did not output the desired segmentation due to the random initialization, and we
+had to run programs several times to obtain good results. Using another criteria might resolve this problem.
+This method is an unsupervised technique, but we still needed to supervise the number of segments K . The
+nonlinear transformation at step 2 did not affect big differences, therefore, this may be able to be skipped.
+The filtering methods such as Gabor filter, Gaussian filter, average filter must take into account how to
+process pixels at outer circumference of images. The conv2 function of matlab assumed as pixels at out of
+the image has 0 intensity values, and it caused bad segmentation often for pixels at outer circumference (The
+pixels at outer circumference will usually have lower values than other usual middle placed pixels in spite
+of the intensities of the original image.) This is a defect of a filtering method based on my image segmentation
+method.
+
+Bibliography
+[1]
+[2]
+[3]
+[4]
+[5]
+[6]
+[7]
+[1] Perona and Malik, ”Preattentive texture discrimination with early vision mechanisms,” J. Opt. Soc.
+Am. A, Vol. 7, No. 5, May 1990.
+
+[2] A. K. Jain, F. Farrokhnia, ”Unsupervised texture segmentation using Gabor filters,” Pattern Recogni-
+tion, vol. 24, no. 12, pp.1167-1186, 1991.
+
+[3] J.G. Daugman: ”Uncertainty relations for resolution in space, spatial frequency, and orientation opti-
+mized by two-dimensional visual cortical filters”, Journal of the Optical Society of America A, 1985,
+vol. 2, pp. 1160-1169.
+
+[4] D. Clausi, M. Ed Jernigan, ”Designing Gabor filters for optimal texture separability,” Pattern Recogni-
+tion, vol. 33, pp. 1835-1849, 2000.
+
+[5] P. Drodatz, ”Textures: A Photographic Album for Artists and Designers,” ”’Dover”’, New York, 1966.
+
+[6] Jianguo Zhang, Tieniu Tan, Li Ma, ”Invariant texture segmentation via circular gabor filter”, Proceedings of the 16th IAPR International Conference on Pattern Recognition (ICPR), Vol II, pp. 901-904,2002.
+
+[7] Gabor filter Applet. http://www.cs.rug.nl/∼imaging/simplecell.html
+
+
+
+
+
 
