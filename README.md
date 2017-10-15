@@ -8,7 +8,7 @@ The texture segmentation algorithm in this project involves the following three 
 • Clustering.
 
 
-** 1- Filter Bank
+### 1- Filter Bank
 
 We present the channels with a bank of two-dimensional Gabor filters. A two-dimensional Gabor function
 consists of a sinusoidal plane wave of some frequency and orientation, modulated by a two-dimensional
