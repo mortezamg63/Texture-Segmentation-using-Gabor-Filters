@@ -44,3 +44,19 @@ and following values of frequencies as recommended in [6]
 where ![equation5](https://user-images.githubusercontent.com/15813546/31585017-c9891d9c-b1c6-11e7-8b4d-4125f0c151cc.jpg), Nc is the width of image which is a power of 2. Note that ![equation6](https://user-images.githubusercontent.com/15813546/31585024-e950a26c-b1c6-11e7-8066-9ca836cfc5ba.jpg)
 and ![equation7](https://user-images.githubusercontent.com/15813546/31585032-f6106a64-b1c6-11e7-855d-e1530a86f5c9.jpg).
 
+### 2-  Feature Extraction
+
+Jain [2] suggested to use a nonlinear sigmoidal function,
+
+![equation8](https://user-images.githubusercontent.com/15813546/31585064-a9012906-b1c7-11e7-897f-d5f28a7b8687.jpg)
+
+which saturates the output of the filters.
+Jain [2] also suggested to compute the average absolute deviation (AAD) for each filtered image. We use
+Gaussian smoothing function which is given by
+
+![equation9](https://user-images.githubusercontent.com/15813546/31585066-af7b7ef8-b1c7-11e7-90ad-04bc40193c45.jpg)
+
+where σ is the standard deviation which determines the (linear) size of the receptive field (window size).
+
+   We choose ![eq10](https://user-images.githubusercontent.com/15813546/31585078-10912e18-b1c8-11e7-86b8-6f13d6346a6a.jpg) where ![eq11](https://user-images.githubusercontent.com/15813546/31585079-17ac21d0-b1c8-11e7-9b3e-7388ae60f260.jpg) is the scale parameter of Gabor filter given by (2) as similar to the recommendation, ![eq12](https://user-images.githubusercontent.com/15813546/31585080-259f1f36-b1c8-11e7-8fc6-531d911ef60a.jpg) , by [6].
+
