@@ -87,18 +87,7 @@ Also, the result is shown in another image as follow.
 
 ![Result pic2](https://user-images.githubusercontent.com/15813546/31585140-72f6b9fa-b1c9-11e7-9272-2a399b6b40f1.jpg)
 
-### 4- Discussion
 
-K-means clustering often did not output the desired segmentation due to the random initialization, and we
-had to run programs several times to obtain good results. Using another criteria might resolve this problem.
-This method is an unsupervised technique, but we still needed to supervise the number of segments K . The
-nonlinear transformation at step 2 did not affect big differences, therefore, this may be able to be skipped.
-The filtering methods such as Gabor filter, Gaussian filter, average filter must take into account how to
-process pixels at outer circumference of images. The conv2 function of matlab assumed as pixels at out of
-the image has 0 intensity values, and it caused bad segmentation often for pixels at outer circumference (The
-pixels at outer circumference will usually have lower values than other usual middle placed pixels in spite
-of the intensities of the original image.) This is a defect of a filtering method based on my image segmentation
-method.
 
 ### Bibliography
 
