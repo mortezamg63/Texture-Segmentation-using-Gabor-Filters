@@ -1,4 +1,4 @@
-# Texture-Segmentation-using-Gabor-Filters
+# Texture Segmentation using Gabor Filters
 The texture segmentation algorithm in this project involves the following three steps:
 
 • Decomposition of the input image using a filter bank,
